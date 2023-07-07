@@ -11,15 +11,16 @@ st.sidebar.success("Select a page above.")
 
 st.markdown(
     """
-    ### This is my Playground for ChatGPT and Langchain projects
+    &nbsp;
     
+    ### This is my Playground for ChatGPT and Langchain projects  
+    &nbsp;
     
+    **👈 Select a project from the sidebar**  
+    &nbsp;
     
-    **👈 Select a project from the sidebar** 
-    
-    
-    
-    
+    &nbsp;
+
     The code is hosted on [github](https://github.com/ajerni/erni-langchain)
-"""
+    """
 )
