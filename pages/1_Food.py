@@ -36,8 +36,6 @@ final_prompt = prompt.format(country=my_country)
 
 result = llm(final_prompt)
 
-restest = llm()
-
 st.write(":blue[Here comes a typical meal of the country you entered:]")
 
 st.write(result)
