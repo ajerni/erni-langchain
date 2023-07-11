@@ -40,12 +40,6 @@ st.write(":blue[Here comes a typical meal of the country you entered:]")
 
 st.write(result)
 
-# tools = load_tools(["serpapi"], llm=llm)
-# get_image_agent = initialize_agent(tools, llm, agent=AgentType.STRUCTURED_CHAT_ZERO_SHOT_REACT_DESCRIPTION, verbose=True)
-# bild = get_image_agent.run(f"give me a www link to an image that looks like {result}. Reply with the hyperlink only.")
-#
-# st.write(bild)
-
 if result:
     search = GoogleSerperAPIWrapper(type="images", num=1)
     image_result = search.results(result)
