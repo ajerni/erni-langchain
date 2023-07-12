@@ -65,6 +65,8 @@ st.video(video_bytes)
 # Video URL/YTB
 st.video("https://www.youtube.com/watch?v=8YKYs2LIxHQ")
 
+st.text("Audio:")
+
 # Audio
 audio_file = open('files/sound.mp3',"rb")
 audio_bytes = audio_file.read()
