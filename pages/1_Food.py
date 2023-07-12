@@ -43,9 +43,9 @@ st.write(result)
 if result:
     search = GoogleSerperAPIWrapper(type="images", num=1)
     image_result = search.results(result)
-    pprint.pp(image_result) #just to display it properly in the terminal
+    pprint.pp(image_result)  # just to display it properly in the terminal
 
-    #who needs a json parser etc. :-) English is my new preferred programming language :-) / Still learn and understand the output parsers of langchain!!!
+    # who needs a json parser etc. :-) English is my new preferred programming language :-) / Still learn and understand the output parsers of langchain!!!
     img_template = """
     Look through this data {img_json} and find the first hyperlink that ends with .jpg under 'imgUrl' entry. Reply with that hyperlink only. No other text in the reply.
     """
