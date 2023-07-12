@@ -32,3 +32,16 @@ if check_password():
     st.write("Here goes your normal Streamlit app...")
     if st.button("Click me"):
         st.text("guguseli")
+
+    if 'toggle' not in st.session_state:
+        st.session_state.toggle = False
+
+    clicked = st.button("click to toggle")
+    if clicked:
+        st.session_state.toggle = not st.session_state.toggle
+        #print(st.session_state.toggle)
+        if st.session_state.toggle:
+            st.text("gugus from toggle")
+            st.image("files/frog.jpeg", width=300)
+
+
