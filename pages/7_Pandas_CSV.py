@@ -8,7 +8,7 @@ df = pd.read_csv("files/auto.csv")
 
 os.environ["OPENAI_API_KEY"] = st.secrets["openai_api_key"]
 
-agent = create_pandas_dataframe_agent(OpenAI(temperature=0), df, verbose=True)
+agent = create_pandas_dataframe_agent(OpenAI(model_name="gpt-3.5-turbo"), df, verbose=True)
 
 st.header("Querying structured data")
 
