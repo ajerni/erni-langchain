@@ -134,11 +134,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Area_chart
-#st.area_chart(df)
+st.area_chart(df, y="cylinders")
 # Bar_chart
-#st.bar_chart(df.head(20))
+st.bar_chart(df.head(20))
 # Line Chart
-#st.line_chart(df.head(10))
+st.line_chart(df.head(10))
 
 # Heatmap
 #fig, ax = plt.subplots()
