@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-langchain = "*"
 beautifulsoup4 = "*"
 black = "*"
 tiktoken = "*"
@@ -23,6 +22,11 @@ pandas = "*"
 datetime = "*"
 seaborn = "*"
 gensim = "*"
+pypdf = "*"
+sentence-transformers = "*"
+hnswlib = "*"
+docarray = "*"
+langchain = {version = "*", extras = ["docarray"]}
 
 [dev-packages]
 
