@@ -11,6 +11,10 @@ st.header("PDF Q+A Bot")
 
 pdf = st.sidebar.file_uploader("load PDF file", type="pdf")
 
+if not pdf:
+    st.info("Please upload PDF file to continue.")
+    st.stop()
+
 if pdf is not None:
     pdf_reader = PdfReader(pdf)
     text = ""
