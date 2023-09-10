@@ -4,6 +4,8 @@ from langchain.text_splitter import CharacterTextSplitter
 import os
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
+from langchain.chains.question_answering import load_qa_chain
+from langchain.chat_models import ChatOpenAI
 
 os.environ["OPENAI_API_KEY"] = st.secrets["openai_api_key"]
 
@@ -34,9 +36,13 @@ if pdf is not None:
 
     vectorstore = FAISS.from_texts(chunks, embeddings)
 
+    llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
 
     def get_answer(question):
-        return vectorstore.get_most_similar(question, 1)[0]
+        similars = vectorstore.similarity_search(query=question, k=3)
+        qa_chain = load_qa_chain(llm=llm, chain_type="stuff")
+        response = qa_chain.run(input_documents=similars, question=question)
+        return response
 
 
     question = st.text_input("Question")
