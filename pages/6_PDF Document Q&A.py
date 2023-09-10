@@ -17,26 +17,26 @@ if pdf is not None:
     for page in pdf_reader.pages:
         text += page.extract_text()
 
-text_splitter = CharacterTextSplitter(
-    separator="\n",
-    chunk_size=1000,
-    chunk_overlap=200,
-    length_function=len
-)
+    text_splitter = CharacterTextSplitter(
+        separator="\n",
+        chunk_size=1000,
+        chunk_overlap=200,
+        length_function=len
+    )
 
-chunks = text_splitter.split_text(text)
+    chunks = text_splitter.split_text(text)
 
-embeddings = OpenAIEmbeddings()
+    embeddings = OpenAIEmbeddings()
 
-vectorstore = FAISS.from_texts(chunks, embeddings)
-
-
-def get_answer(question):
-    return vectorstore.get_most_similar(question, 1)[0]
+    vectorstore = FAISS.from_texts(chunks, embeddings)
 
 
-question = st.text_input("Question")
+    def get_answer(question):
+        return vectorstore.get_most_similar(question, 1)[0]
 
-if question:
-    answer = get_answer(question)
-    st.write(answer)
+
+    question = st.text_input("Question")
+
+    if question:
+        answer = get_answer(question)
+        st.write(answer)
