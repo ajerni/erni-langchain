@@ -18,3 +18,5 @@ result = agent.run(input_q)
 
 st.write(result)
 
+st.dataframe(df.head(10))
+
