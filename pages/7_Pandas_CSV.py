@@ -14,9 +14,12 @@ st.header("Querying structured data")
 
 input_q = st.text_input("Ask question to the CSV file")
 
-result = agent.run(input_q)
-
-st.write(result)
-
 st.dataframe(df.head(10))
+
+if input_q
+    result = agent.run(input_q)
+
+    st.write(result)
+
+    
 
