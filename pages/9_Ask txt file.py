@@ -43,7 +43,9 @@ string_data = stringio.read() #mit streamlit eingelesen, also wird nicht auch no
 # my_question = "Wer hat im November Geburtstag?"
 my_question = st.text_input("Gib Deine Frage an das Dokument ein:")
 
-response = chain.run(content=string_data, question=my_question)
-# response = chain.run(content=doc[0].page_content, question=my_question) //wenn langchain TextLoader genutzt würde
+if my_question:
+    
+    response = chain.run(content=string_data, question=my_question)
+    # response = chain.run(content=doc[0].page_content, question=my_question) //wenn langchain TextLoader genutzt würde
 
-st.write(response)
+    st.write(response)
