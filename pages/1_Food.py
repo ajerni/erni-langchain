@@ -34,11 +34,13 @@ prompt = PromptTemplate(
 
 final_prompt = prompt.format(country=my_country)
 
-result = llm(final_prompt)
+if my_country:
 
-st.write(":blue[Here comes a typical meal of the country you entered:]")
+    result = llm(final_prompt)
 
-st.write(result)
+    st.write(":blue[Here comes a typical meal of the country you entered:]")
+
+    st.write(result)
 
 if result:
     search = GoogleSerperAPIWrapper(type="images", num=1)
