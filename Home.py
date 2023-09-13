@@ -16,7 +16,7 @@ st.write("# Andi's Langchain Projects 🤖")
 
 st.sidebar.title('AI Toolbox')  
 st.sidebar.text('Select a project:')  
-st.sidebar.image('/files/gitarren.jpeg')
+st.sidebar.image('files/gitarren.jpeg')
 
 st.markdown(
     """
