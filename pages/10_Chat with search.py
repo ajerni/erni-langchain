@@ -60,7 +60,7 @@ def handle_chat(prompt, openai_api_key, msgs, memory):
 # Initializing the app
 initialize_page()
 st.info("Powered by GPT-3.5-turbo and DuckDuckGo search, this chatbot provides real-time answers, accurate search results, and remembers past conversations.", icon="💡")
-openai_api_key = st.secrets['OPENAI_API_KEY']
+openai_api_key = st.secrets['openai_api_key']
 msgs = StreamlitChatMessageHistory()
 memory = ConversationBufferMemory(
     chat_memory=msgs, 
