@@ -30,6 +30,7 @@ langchain = {version = "*", extras = ["docarray"]}
 faiss-cpu = "*"
 pypdf2 = "==3.0.1"
 pycryptodome = "*"
+duckduckgo-search = "*"
 
 [dev-packages]
 

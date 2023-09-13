@@ -1,9 +1,11 @@
 # erni-langchain
 
-This is my playground for steramlit and langchain
+This is my AI playground for ChatGPT and langchain hosted on stramlit.
 
-pipenv shell
-pipenv install
+## Uses virtual environment with pipenv:
+
+- pipenv shell
+- pipenv install
 
 ## Demo
 
