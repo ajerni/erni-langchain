@@ -6,7 +6,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
-        'See code': 'https://github.com/ajerni/erni-langchain',
+        'Get Help': 'https://github.com/ajerni/erni-langchain',
         'About': 'https://www.andierni.ch'
     }
 )
