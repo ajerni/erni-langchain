@@ -1,6 +1,6 @@
 # erni-langchain
 
-This is my AI playground for ChatGPT and langchain hosted on stramlit.
+This is my AI playground for ChatGPT and langchain hosted on streamlit.
 
 ## Uses virtual environment with pipenv:
 
