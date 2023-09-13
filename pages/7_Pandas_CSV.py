@@ -16,7 +16,7 @@ input_q = st.text_input("Ask question to the CSV file")
 
 st.dataframe(df.head(10))
 
-if input_q
+if input_q:
     result = agent.run(input_q)
 
     st.write(result)
