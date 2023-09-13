@@ -3,19 +3,18 @@ import streamlit as st
 st.set_page_config(
     page_title="Andi's Langchain Projects",
     page_icon="👋",
-    # layout="wide",
+    layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"
+        'See code': 'https://github.com/ajerni/erni-langchain',
+        'About': "https://www.andierni.ch"
     }
 )
 
 st.write("# Andi's Langchain Projects 🤖")
 
 st.sidebar.title('AI Toolbox')  
-st.sidebar.text('Select a project:')  
+st.sidebar.text('Select a project above')  
 st.sidebar.image('files/gitarren.jpeg')
 
 st.markdown(
