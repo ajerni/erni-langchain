@@ -54,10 +54,9 @@ import dweepy
 st.write("Dweet.io Example")
 my_text = "...waiting..."
 st.write("Test it like: 'https://dweet.io/dweet/for/aetest?text=hello'")
-status = st.write("Status: " + my_text)
 
 for dweet in dweepy.listen_for_dweets_from('aetest'):
     my_text = dweet["content"]["text"]
-    status.write("Status: " + my_text)
+    st.write("Status: " + my_text)
     
 
