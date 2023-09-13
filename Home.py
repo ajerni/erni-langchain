@@ -13,9 +13,9 @@ st.set_page_config(
 
 st.write("# Andi's Langchain Projects 🤖")
 
-st.sidebar.title('AI Toolbox')  
-st.sidebar.text('Select a project above')  
-st.sidebar.image('files/gitarren.jpeg')
+# st.sidebar.title('AI Toolbox')  
+# st.sidebar.text('Select a project above')  
+# st.sidebar.image('files/gitarren.jpeg')
 
 st.markdown(
     """
