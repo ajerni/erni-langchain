@@ -42,25 +42,25 @@ if my_country:
 
     st.write(result)
 
-if result:
-    search = GoogleSerperAPIWrapper(type="images", num=1)
-    image_result = search.results(result)
-    pprint.pp(image_result)  # just to display it properly in the terminal
+    if result:
+        search = GoogleSerperAPIWrapper(type="images", num=1)
+        image_result = search.results(result)
+        pprint.pp(image_result)  # just to display it properly in the terminal
 
-    # who needs a json parser etc. :-) English is my new preferred programming language :-) / Still learn and understand the output parsers of langchain!!!
-    img_template = """
-    Look through this data {img_json} and find the first hyperlink that ends with .jpg under 'imgUrl' entry. Reply with that hyperlink only. No other text in the reply.
-    """
+        # who needs a json parser etc. :-) English is my new preferred programming language :-) / Still learn and understand the output parsers of langchain!!!
+        img_template = """
+        Look through this data {img_json} and find the first hyperlink that ends with .jpg under 'imgUrl' entry. Reply with that hyperlink only. No other text in the reply.
+        """
 
-    img_template_prompt = PromptTemplate(
-        input_variables=["img_json"],
-        template=img_template,
-    )
+        img_template_prompt = PromptTemplate(
+            input_variables=["img_json"],
+            template=img_template,
+        )
 
-    img_template_prompt_final = img_template_prompt.format(img_json=image_result)
+        img_template_prompt_final = img_template_prompt.format(img_json=image_result)
 
-    link_to_image = llm(img_template_prompt_final)
+        link_to_image = llm(img_template_prompt_final)
 
-    st.write(link_to_image)
+        st.write(link_to_image)
 
-    st.image(link_to_image, width=250)
+        st.image(link_to_image, width=250)
