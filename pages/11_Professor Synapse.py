@@ -76,9 +76,9 @@ if len(msgs.messages) == 0 or st.sidebar.button("Reset chat history"):
 handle_messages(msgs.messages, st.session_state.steps)
 prompt = get_prompt()
 
-with open("/pages/synapse_prompt.txt", "r") as f:
+file_path = os.path.join("..", "synapse_prompt.txt")
+with open(file_path, "r") as f:
     professor_synapse_prompt = f.read()
-
 
 st.chat_message("user").write(professor_synapse_prompt)
 
