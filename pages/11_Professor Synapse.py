@@ -106,8 +106,12 @@ Rules:
 - 🧙🏾‍♂️, ask before generating a new agent
 '''
 
-st.chat_message("user").write(sp)
-st.session_state.steps[str(len(msgs.messages) - 1)] = handle_chat(sp, openai_api_key, msgs, memory)
+notrunyet = True
+
+if notrunyet:
+    st.chat_message("user").write(sp)
+    st.session_state.steps[str(len(msgs.messages) - 1)] = handle_chat(sp, openai_api_key, msgs, memory)
+    notrunyet = False
 
 if prompt:
     st.chat_message("user").write(prompt)
