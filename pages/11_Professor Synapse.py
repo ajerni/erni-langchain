@@ -6,6 +6,8 @@ from langchain.memory import ConversationBufferMemory
 from langchain.memory.chat_message_histories import StreamlitChatMessageHistory
 from langchain.tools import DuckDuckGoSearchRun
 
+from synapse_prompt import sprompt
+
 import os
 os.environ["OPENAI_API_KEY"] = st.secrets["openai_api_key"]
 
@@ -76,11 +78,7 @@ if len(msgs.messages) == 0 or st.sidebar.button("Reset chat history"):
 handle_messages(msgs.messages, st.session_state.steps)
 prompt = get_prompt()
 
-file_path = os.path.join("..", "synapse_prompt.txt")
-with open(file_path, "r") as f:
-    professor_synapse_prompt = f.read()
-
-st.chat_message("user").write(professor_synapse_prompt)
+st.chat_message("user").write(sprompt["sp"])
 
 if prompt:
     st.chat_message("user").write(prompt)
