@@ -107,6 +107,7 @@ Rules:
 '''
 
 st.chat_message("user").write(sp)
+st.session_state.steps[str(len(msgs.messages) - 1)] = handle_chat(prompt, openai_api_key, msgs, memory)
 
 if prompt:
     st.chat_message("user").write(prompt)
