@@ -4,7 +4,7 @@ This is my AI playground for ChatGPT and langchain hosted on streamlit.
 
 ## Uses virtual environment with pipenv:
 
-- pipenv shell
+- pipenv shell (streamlit run Home.py)
 - pipenv install
 
 ## Demo
